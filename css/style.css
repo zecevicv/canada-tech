@@ -738,7 +738,7 @@ body {
   position: absolute;
   top: 0;
   left: calc(13% + 1px);
-  height: 199vw;
+  height: 286vw;
   width: 1px;
   background-color: #9797973d;
 }
@@ -759,7 +759,7 @@ body {
 
 @media (max-width: 1023.98px) {
   .lines .line {
-    height: 700vw;
+    height: 1050vw;
   }
 
   .lines .line {
