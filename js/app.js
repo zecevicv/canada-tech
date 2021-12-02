@@ -1,3 +1,16 @@
+/* #Hamburger Menu
+  ======================================================= */
+  const hamburgerBtn = document.querySelector('.header-hamburger a');
+  const body = document.querySelector('body');
+  const header = document.querySelector('.header');
+  
+  if (hamburgerBtn && window.innerWidth> 1023) {
+    hamburgerBtn.addEventListener('click', (e) => {
+      header.classList.toggle('show');
+      body.classList.toggle('no-scroll');
+    });
+  }
+
 /* #Projects Slider
 ================================================== */
 new Swiper(".projects-slider .swiper", {
