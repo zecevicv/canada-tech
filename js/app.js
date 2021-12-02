@@ -37,3 +37,41 @@ new Swiper(".portfolio-slider .swiper", {
     }
   }
 });
+
+/* #About Sliders
+================================================== */
+var videoSlider = new Swiper(".about .video-slider .swiper", {
+  effect: 'fade',
+  breakpoints: {
+    0: {
+      slidesPerView: 1.15
+    },
+    1024: {
+      slidesPerView: 1
+    }
+  },
+  loop: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
+
+var textSlider = new Swiper(".about .text-slider .swiper", {
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1.15
+    },
+    1024: {
+      slidesPerView: 3
+    }
+  },
+  navigation: {
+    nextEl: ".about .next",
+    prevEl: ".about .prev",
+  },
+  thumbs: {
+    swiper: videoSlider,
+  },
+  loop: true,
+});
