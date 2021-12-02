@@ -137,6 +137,7 @@ body {
 ================================================== */
 .banner {
   position: relative;
+  overflow: hidden;
 }
 
 .banner video {
@@ -184,10 +185,17 @@ body {
   left: 50%;
   bottom: 1vw;
   transform: translateX(-50%);
+  animation: bounce 3s infinite;
 }
 
 .banner .scroll img {
   width: 2vw;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-1.5vw) translateX(-50%);
+  }
 }
 
 @media (max-width: 1023.98px) {
@@ -217,6 +225,7 @@ body {
 ================================================== */
 .projects {
   position: relative;
+  overflow: hidden;
 }
 
 .projects .bg,
@@ -448,6 +457,7 @@ body {
   width: 100%;
   color: black;
   padding: 11.45vw 0 7.8vw 0;
+  overflow: hidden;
 }
 
 .portfolio-slider .container {
@@ -574,6 +584,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .team .img img {
@@ -644,6 +655,7 @@ body {
 ================================================== */ 
 .stats {
   padding: 7.8vw 0 2vw 0;
+  overflow: hidden;
 }
 
 .stats .container {
@@ -785,6 +797,7 @@ body {
 .about {
   padding-top: 10vw;
   position: relative;
+  overflow: hidden;
 }
 
 .about .text-1 {
@@ -859,6 +872,7 @@ body {
   top: 6.87vw;
   z-index: 100;
   height: 40.57vw;
+  overflow: hidden;
 }
 
 .about .video-slider,

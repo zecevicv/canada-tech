@@ -1,15 +1,15 @@
 /* #Hamburger Menu
   ======================================================= */
-  const hamburgerBtn = document.querySelector('.header-hamburger a');
-  const body = document.querySelector('body');
-  const header = document.querySelector('.header');
-  
-  if (hamburgerBtn && window.innerWidth> 1023) {
-    hamburgerBtn.addEventListener('click', (e) => {
-      header.classList.toggle('show');
-      body.classList.toggle('no-scroll');
-    });
-  }
+const hamburgerBtn = document.querySelector('.header-hamburger a');
+const body = document.querySelector('body');
+const header = document.querySelector('.header');
+
+if (hamburgerBtn && window.innerWidth > 1023) {
+  hamburgerBtn.addEventListener('click', (e) => {
+    header.classList.toggle('show');
+    body.classList.toggle('no-scroll');
+  });
+}
 
 /* #Projects Slider
 ================================================== */
@@ -87,4 +87,55 @@ var textSlider = new Swiper(".about .text-slider .swiper", {
     swiper: videoSlider,
   },
   loop: true,
+});
+
+/* #Numbers Animation
+  ======================================================= */
+gsap.registerPlugin(ScrollTrigger);
+
+const numbers = document.querySelectorAll('.numbers .num');
+
+ScrollTrigger.create({
+  trigger: ".numbers",
+  onEnter: () => {
+    numbers.forEach((number) => {
+      var zero = {val:0};
+      var num = number.innerHTML;
+    
+      gsap.to(zero, {
+        val: num,
+        duration: 3,
+        scrollTrigger: numbers,
+        onUpdate: function() {
+          number.innerHTML = zero.val.toFixed(0);
+        }
+      });
+    });
+  }
+});
+
+// $(".numbers").each(function(index, element) {
+//   var count = $(this),
+//       zero = {val:0},
+//       num = count.data("number"),
+//       split = (num + "").split("."),
+//       decimals = split.length > 1 ? split[1].length : 0;
+
+//     gsap.to(zero, {
+//       val: num,
+//       duration: 2,
+//       scrollTrigger: element,
+//       onUpdate: function() {
+//         count.text(zero.val.toFixed(decimals));
+//       }
+//     });
+// });
+
+/* #AOS Animations
+    ======================================================= */
+AOS.init({
+  startEvent: 'load',
+  once: true,
+  duration: 800,
+  offset: 300,
 });
