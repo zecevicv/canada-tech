@@ -28,6 +28,10 @@ menuLinks.forEach((link) => {
       yOffset = -100;
     } else {
       yOffset = -80;
+
+      if (id == "#aboutSlider") {
+        yOffset = -220;
+      }
     }
     
     const element = document.querySelector(id);

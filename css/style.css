@@ -1166,3 +1166,67 @@ body {
     opacity: 1;
   }
 }
+
+/* #About Team
+================================================== */
+.about-team {
+  padding: 7.65vw 0;
+}
+
+.about-team .container {
+  width: 87%;
+  display: flex;
+}
+
+.about-team .img {
+  flex: 0 0 27.34vw;
+  margin-right: 7.44vw;
+}
+
+.about-team .img img {
+  width: 100%;
+}
+
+.about-team h1 {
+  margin-bottom: 1vw;
+}
+
+.about-team p {
+  margin-bottom: 2.5vw;
+}
+
+.about-team a img {
+  width: 2vw;
+}
+
+@media (max-width: 1023.98px) {
+  .about-team {
+    padding: 20vw 0 15vw 0;
+  }
+  
+  .about-team .container {
+    width: 92%;
+    display: block;
+  }
+  
+  .about-team .img {
+    margin-right: 0;
+    margin-bottom: 7vw;
+  }
+  
+  .about-team .img img {
+    width: 75%;
+  }
+  
+  .about-team h1 {
+    margin-bottom: 3vw;
+  }
+  
+  .about-team p {
+    margin-bottom: 8vw;
+  }
+  
+  .about-team a img {
+    width: 10vw;
+  }
+}
