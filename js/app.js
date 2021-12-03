@@ -4,12 +4,41 @@ const hamburgerBtn = document.querySelector('.header-hamburger a');
 const body = document.querySelector('body');
 const header = document.querySelector('.header');
 
-if (hamburgerBtn && window.innerWidth > 1023) {
+if (hamburgerBtn) {
   hamburgerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     header.classList.toggle('show');
     body.classList.toggle('no-scroll');
   });
 }
+
+/* #Menu Scroll On Click
+  ======================================================= */
+// Handling link clicks
+const menuLinks = document.querySelectorAll('.header-menu a');
+
+menuLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const id = link.hash;
+    let yOffset = 0;
+
+    if (window.innerWidth > 1024) {
+      yOffset = -100;
+    } else {
+      yOffset = -80;
+    }
+    
+    const element = document.querySelector(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({top: y, behavior: 'smooth'});
+
+    header.classList.remove('show');
+    body.classList.remove('no-scroll');
+  });
+});
 
 /* #Projects Slider
 ================================================== */
