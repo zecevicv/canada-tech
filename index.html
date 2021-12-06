@@ -34,11 +34,16 @@
       <div class="header-action">
         <!-- Hamburger -->
         <div class="header-hamburger">
-          <a href="#">
-            <img src="img/icons/hamburger.svg" alt="canada-tech-img">
-          </a>
+          <button class="hamburger hamburger--slider">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
-        <p class="f-d-22 f-m-34 light f-zilla">contact us</p>
+        <!-- Contact Btn -->
+        <div class="scroll-to">
+          <a href="#contact" class="f-d-22 f-m-34 light f-zilla">contact us</a>
+        </div>
       </div>
       <!-- Logo -->
       <div class="header-logo">
@@ -48,7 +53,7 @@
       </div>
       <!-- Header Menu -->
       <div class="header-menu">
-        <ul>
+        <ul class="scroll-to">
           <!-- Item -->
           <li>
             <a href="#aboutSlider">
@@ -111,8 +116,11 @@
   <!-- Banner -->
   <div class="banner" id="banner">
     <div class="video">
-      <video autoplay loop muted playsinline preload="metadata">
-        <source src="video/video.mp4" type="video/mp4">
+      <video class="lazy d-desktop" autoplay loop muted playsinline src="video/desktop-comp.mp4">
+        <source src="video/desktop-comp.mp4" type="video/mp4">
+      </video>
+      <video class="lazy d-mobile" autoplay loop muted playsinline src="video/mobile-comp.mp4">
+        <source src="video/mobile-comp.mp4" type="video/mp4">
       </video>
     </div>
     <div class="text">
@@ -126,8 +134,8 @@
         Estate.
       </p>
     </div>
-    <div class="scroll">
-      <a href="#">
+    <div class="scroll scroll-to">
+      <a href="#aboutSlider">
         <img src="img/icons/scroll.svg" alt="canada-tech-img">
       </a>
     </div>
@@ -151,7 +159,7 @@
               <div class="swiper-slide">
                 <div>
                   <div class="video">
-                    <video autoplay playsinline muted loop preload="metadata" src="video/video-2.mp4"></video>
+                    <video class="lazy" autoplay loop muted playsinline src="video/realestate-comp.mp4"></video>
                   </div>
                 </div>
               </div>
@@ -159,7 +167,7 @@
               <div class="swiper-slide">
                 <div>
                   <div class="video">
-                    <video autoplay playsinline muted loop preload="metadata" src="video/video-1.mp4"></video>
+                    <video class="lazy" autoplay loop muted playsinline src="video/technology-comp.mp4"></video>
                   </div>
                 </div>
               </div>
@@ -167,15 +175,7 @@
               <div class="swiper-slide">
                 <div>
                   <div class="video">
-                    <video autoplay playsinline muted loop preload="metadata" src="video/video-2.mp4"></video>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide -->
-              <div class="swiper-slide">
-                <div>
-                  <div class="video">
-                    <video autoplay playsinline muted loop preload="metadata" src="video/video-1.mp4"></video>
+                    <video class="lazy" autoplay loop muted playsinline src="video/data-comp.mp4"></video>
                   </div>
                 </div>
               </div>
@@ -205,18 +205,6 @@
                   <div class="text">
                     <p class="f-d-35 f-m-50 f-zilla">02</p>
                     <h3 class="f-d-35 f-m-50 text-orange f-zilla">Technology</h3>
-                    <p class="f-d-22 f-m-32 f-zilla description">Benefit from more than 30 years of
-                      experience from Israel’s leading global real
-                      estate development group</p>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide -->
-              <div class="swiper-slide">
-                <div>
-                  <div class="text">
-                    <p class="f-d-35 f-m-50 f-zilla">03</p>
-                    <h3 class="f-d-35 f-m-50 text-orange f-zilla">Data</h3>
                     <p class="f-d-22 f-m-32 f-zilla description">Benefit from more than 30 years of
                       experience from Israel’s leading global real
                       estate development group</p>
@@ -317,12 +305,12 @@
         <div class="info info-1">
           <p class="f-d-20 f-m-32 semi-bold f-zilla">ASAF</p>
           <p class="f-d-16 f-m-24 f-zilla">Co-Founder</p>
-          <a href="#"><img src="img/icons/plus-icon.svg" alt="canada-tech-img"></a>
+          <a href="/asaf.html" target="_blank"><img src="img/icons/plus-icon.svg" alt="canada-tech-img"></a>
         </div>
         <div class="info info-2">
           <p class="f-d-20 f-m-32 semi-bold f-zilla">MAYA</p>
           <p class="f-d-16 f-m-24 f-zilla">General Manager</p>
-          <a href="#"><img src="img/icons/plus-icon.svg" alt="canada-tech-img"></a>
+          <a href="/maya.html" target="_blank"><img src="img/icons/plus-icon.svg" alt="canada-tech-img"></a>
         </div>
       </div>
     </div>
@@ -485,76 +473,83 @@
   <!-- Footer -->
   <footer class="footer d-desktop">
     <div class="container">
-      <!-- Links -->
-      <div class="footer-links">
-        <ul class="f-d-18 f-zilla">
-          <!-- Item -->
-          <li>
-            <a href="#">
-              Home Page
-            </a>
-          </li>
-          <!-- Item -->
-          <li>
-            <a href="#">
-              Professionalism And Support
-            </a>
-          </li>
-          <!-- Item -->
-          <li>
-            <a href="#">
-              Our Startup Sandbox
-            </a>
-          </li>
-          <!-- Item -->
-          <li>
-            <a href="#">
-              We Are Enablers
-            </a>
-          </li>
-          <!-- Item -->
-          <li>
-            <a href="#">
-              The Team
-            </a>
-          </li>
-          <!-- Item -->
-          <li>
-            <a href="#">
-              Our Portfolio
-            </a>
-          </li>
-          <!-- Item -->
-          <li>
-            <a href="#">
-              Our Projects
-            </a>
-          </li>
-        </ul>
+      <!-- Top -->
+      <div class="footer-top">
+        <!-- Links -->
+        <div class="footer-links">
+          <ul class="scroll-to f-d-18 f-zilla">
+            <!-- Item -->
+            <li>
+              <a href="#banner">
+                Home Page
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#aboutSlider">
+                Professionalism And Support
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#aboutText2">
+                Our Startup Sandbox
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#stats">
+                We Are Enablers
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#team">
+                The Team
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#portfolio">
+                Our Portfolio
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#projects">
+                Our Projects
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Social -->
+        <div class="footer-social">
+          <p class="f-d-18 f-zilla">Follow us</p>
+          <ul>
+            <!-- Item -->
+            <li>
+              <a href="#">
+                <img src="img/icons/linkedin.svg" alt="canada-tech-img">
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#">
+                <img src="img/icons/medium.svg" alt="canada-tech-img">
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#">
+                <img src="img/icons/facebook.svg" alt="canada-tech-img">
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!-- Social -->
-      <div class="footer-social">
-        <p class="f-d-18 f-zilla">Follow us</p>
-        <ul>
-          <!-- Item -->
-          <li>
-            <a href="#">
-              <img src="img/icons/linkedin.svg" alt="canada-tech-img">
-            </a>
-          </li>
-          <!-- Item -->
-          <li>
-            <a href="#">
-              <img src="img/icons/medium.svg" alt="canada-tech-img">
-            </a>
-          </li>
-          <!-- Item -->
-          <li>
-            <a href="#">
-              <img src="img/icons/facebook.svg" alt="canada-tech-img">
-            </a>
-          </li>
-        </ul>
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <a href="https://elevate.co.il/" class="f-d-14 f-zilla" target="_blank">Design & Code  by Elevate</a>
       </div>
     </div>
   </footer>
@@ -576,6 +571,7 @@
   <script src="js/ScrollTrigger.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
     integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="js/yall.min.js"></script>
 
   <!-- Script -->
   <script src="js/app.js"></script>

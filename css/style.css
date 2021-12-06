@@ -78,10 +78,8 @@ body {
 
 .header-hamburger {
   margin-right: 1.9vw;
-}
-
-.header-hamburger img {
-  width: 1.7vw;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 1023.98px) {
@@ -96,9 +94,147 @@ body {
   .header-hamburger {
     margin-right: 5vw;
   }
-  
-  .header-hamburger img {
+}
+
+/* #Hamburger
+================================================== */
+.hamburger {
+  font: inherit;
+  display: inline-flex;
+  align-items: center;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: .3s;
+  transition-property: all;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+  outline: none !important;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+  background-color: white;
+}
+
+.hamburger-box {
+  position: relative;
+  display: inline-block;
+  width: 1.71vw;
+  height: 1.41vw;
+}
+
+.hamburger-inner {
+  top: 50%;
+  display: block;
+  margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  position: absolute;
+  width: 1.71vw;
+  height: 1px;
+  transition-timing-function: ease;
+  transition-duration: .3s;
+  transition-property: all;
+  background-color: white;
+}
+
+.header-white .hamburger-inner,
+.header-white .hamburger-inner:after,
+.header-white .hamburger-inner:before {
+  background-color: white;
+}
+
+.header.show-menu .hamburger-inner,
+.header.show-menu .hamburger-inner:after,
+.header.show-menu .hamburger-inner:before {
+  background-color: white;
+}
+
+.hamburger-inner:after,
+.hamburger-inner:before {
+  display: block;
+  content: "";
+}
+
+.hamburger-inner:before {
+  top: 0;
+  left: 0;
+}
+
+.hamburger-inner:after {
+  bottom: 0;
+  left: 0;
+}
+
+.hamburger--slider .hamburger-inner {
+  top: 0;
+  margin-top: 0;
+}
+
+.hamburger--slider .hamburger-inner:before {
+  top: .57vw;
+  transition-timing-function: ease;
+  transition-duration: .3s;
+  transition-property: all;
+}
+
+.hamburger--slider .hamburger-inner:after {
+  top: 1.14vw;
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+  transform: translate3d(0, .57vw, 0) rotate(45deg);
+}
+
+.hamburger--slider.is-active .hamburger-inner:before {
+  transform: rotate(-45deg) translate3d(-1vw, -.35vw, 0);
+  opacity: 0;
+}
+
+.hamburger--slider.is-active .hamburger-inner:after {
+  transform: translate3d(0, -1.14vw, 0) rotate(-90deg);
+  width: 100%;
+}
+
+@media (max-width: 1023.98px) {
+  .hamburger-box {
     width: 8.4vw;
+    height: 5.6vw;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner:after,
+  .hamburger-inner:before {
+    width: 8.4vw;
+  }
+
+  .hamburger--slider .hamburger-inner:before {
+    top: 2.76vw;
+  }
+  
+  .hamburger--slider .hamburger-inner:after {
+    top: 5.53vw;
+  }
+
+  .hamburger--slider.is-active .hamburger-inner {
+    transform: translate3d(0, 2.76vw, 0) rotate(45deg);
+  }
+
+  .hamburger--slider.is-active .hamburger-inner:before {
+    transform: rotate(-45deg) translate3d(-1vw, -1.5vw, 0);
+  }
+
+  .hamburger--slider.is-active .hamburger-inner:after {
+    transform: translate3d(0, -5.53vw, 0) rotate(-90deg);
   }
 }
 
@@ -110,7 +246,7 @@ body {
   padding: 2.7vw 7.3vw 1.97vw 9.58vw;
 }
 
-.footer .container {
+.footer-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -141,6 +277,13 @@ body {
 
 .footer-social li img {
   width: 2vw;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid white;
+  padding-top: 1.5vw;
+  margin-top: 1.5vw;
 }
 
 /* #Banner
@@ -875,6 +1018,10 @@ body {
 
 /* #About Slider
 ================================================== */
+.about {
+  overflow: hidden;
+}
+
 .about .slider {
   position: absolute;
   width: 78.5%;
@@ -882,7 +1029,6 @@ body {
   top: 6.87vw;
   z-index: 100;
   height: 40.57vw;
-  overflow: hidden;
 }
 
 .about .video-slider,
@@ -894,10 +1040,10 @@ body {
   z-index: 100;
 }
 
-.about .video-slider {
-  position: relative;
+.about .video-slider,
+.about .text-slider {
   height: 40.57vw;
-  width: 26.19vw;
+  width: 25.9vw;
 }
 
 .about .video-slider::after {
@@ -936,6 +1082,10 @@ body {
   height: 40.57vw;
   object-fit: cover;
   object-position: center;
+}
+
+.about .text-slider .swiper {
+  overflow: visible;
 }
 
 .about .swiper-slide .description {
@@ -997,13 +1147,12 @@ body {
   
   .about .video-slider,
   .about .text-slider {
-    width: 100%;
+    width: 85%;
     padding-left: 4%;
   }
   
   .about .video-slider {
     height: 128.8vw;
-    width: 100%;
   }
   
   .about .video-slider::after {
@@ -1193,6 +1342,7 @@ body {
 
 .about-team p {
   margin-bottom: 2.5vw;
+  font-family: 'Sora', sans-serif;
 }
 
 .about-team a img {
