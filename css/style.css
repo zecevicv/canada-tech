@@ -286,6 +286,48 @@ body {
   margin-top: 1.5vw;
 }
 
+@media (max-width: 1023.98px) {
+  .footer {
+    padding: 12vw 10.5% 10vw 10.5%;
+  }
+  
+  .footer-top {
+    display: block;
+  }
+  
+  .footer-links ul {
+    display: block;
+    line-height: 1;
+  }
+  
+  .footer-links li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 7.33vw;
+  }
+  
+  .footer-social {
+    margin-top: 7.33vw;
+  }
+  
+  .footer-social p {
+    margin-right: 4vw;
+  }
+  
+  .footer-social li:not(:last-child) {
+    margin-right: 2.66vw;
+  }
+  
+  .footer-social li img {
+    width: 7.33vw;
+  }
+  
+  .footer-bottom {
+    padding-top: 8vw;
+    margin-top: 6.66vw;
+    text-align: left;
+  }
+}
+
 /* #Banner
 ================================================== */
 .banner {
