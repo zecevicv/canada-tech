@@ -291,6 +291,7 @@ body {
 .banner {
   position: relative;
   overflow: hidden;
+  background-color: black;
 }
 
 .banner video {
@@ -757,13 +758,14 @@ body {
 }
 
 .team .info-1 {
-  top: 37%;
-  left: 4%;
+  top: 34%;
+  left: -2%;
+  width: 7vw;
 }
 
 .team .info-2 {
-  top: 49%;
-  right: 3%;
+  top: 38%;
+  right: -1%;
 }
 
 .team .info a {
@@ -791,12 +793,13 @@ body {
 
   .team .info-1 {
     top: 0;
-    left: 21%;
+    left: 1%;
+    width: 38vw;
   }
   
   .team .info-2 {
-    top: 0;
-    right: 22%;
+    top: 6%;
+    right: 8%;
   }
 
   .team .info a img {
