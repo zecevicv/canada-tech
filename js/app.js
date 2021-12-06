@@ -30,6 +30,10 @@ scrollToFn.forEach((fn) => {
 
       if (window.innerWidth > 1024) {
         yOffset = -100;
+
+        if (id == "#aboutText2") {
+          yOffset = -220;
+        }
       } else {
         yOffset = -80;
 
@@ -164,7 +168,3 @@ AOS.init({
   duration: 800,
   offset: 300,
 });
-
-/* #Lazy Loading
-    ======================================================= */
-document.addEventListener("DOMContentLoaded", yall);
